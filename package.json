@@ -6,8 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:prod": "vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite preview --port 4173",
+    "docker:build": "docker build -t healwell-homeopathy .",
+    "docker:run": "docker run -p 3000:8080 healwell-homeopathy",
+    "docker:compose": "docker-compose up -d",
+    "docker:compose:build": "docker-compose up --build -d"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
