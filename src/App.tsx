@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ContactHeader } from './components/ContactHeader';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -95,7 +96,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+      <ContactHeader />
       <Navbar currentPage={currentPage} onNavigate={handleNavigation} />
       
       <main>
